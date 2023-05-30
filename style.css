@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+html{
+    min-width: none;
+}
+*{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.attribution{ 
+    font-size: 11px;
+    position: absolute;
+    bottom: 5px;
+}
+.attribution a{ 
+    color: hsl(228, 45%, 44%);
+}
+body{
+    background-color: hsl(210, 46%, 95%);
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.containerGrid{
+    display: grid;
+    grid:
+    "danielComment danielComment jonathanComment kiraComment" 275px
+    "jeanetteComment patrickComment patrickComment kiraComment" 275px
+    / 300px 300px 300px 300px;
+    gap: 25px;
+}
+.danielComment{
+    background-color: hsl(263, 55%, 52%);
+    grid-area: danielComment;
+    border-radius: 7.5px;
+    position: relative;
+    z-index: 0;
+}
+.danielComment .quote{
+    position: absolute;
+    left: 400px;
+    z-index: -1;
+}
+.jonathanComment{
+    background-color: hsl(217, 19%, 35%);
+    grid-area: jonathanComment;
+    border-radius: 7.5px;
+}
+.kiraComment{
+    background-color: hsl(0, 0%, 100%);
+    grid-area: kiraComment;
+    border-radius: 7.5px;
+}
+.whiteText{
+    color: #fff;
+}
+.jeanetteComment{
+    background-color: hsl(0, 0%, 100%);
+    grid-area: jeanetteComment;
+    border-radius: 7.5px;
+}
+.patrickComment{
+    background-color: hsl(219, 29%, 14%);
+    grid-area: patrickComment;
+    border-radius: 7.5px;
+}
+.picAndName{
+    display: flex;
+    margin: 25px 0 0 30px;
+}
+.picAndName img{
+    border-radius: 30px;
+    border: 1px solid #e7c4ff;
+    width: 35px;
+    height: 35px;
+}
+.picAndName p{
+    margin-left: 10px;
+}
+.name
+.graduate{
+    font-size: 14px;
+    opacity: 50%;
+}
+.title{
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 10px 30px;
+    z-index: 1;
+}
+.review{
+    opacity: 70%;
+    padding: 10px 30px;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 1125px){
+    .container{
+        align-items: flex-start;
+        margin: 30px 0;
+    }
+    .containerGrid{
+        grid:
+        "danielComment" 275px
+        "danielComment" 100px
+        "jonathanComment" 275px
+        "jeanetteComment" 275px
+        "patrickComment" 275px
+        "patrickComment" 100px
+        "kiraComment" 275px
+        "kiraComment" 100px
+        / 420px;
+        margin: 0 10%;
+    }
+    footer{
+        display: none;
+    }
+    .danielComment .quote{
+        left: 250px;
+    }   
+}
